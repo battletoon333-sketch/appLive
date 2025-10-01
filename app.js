@@ -1,13 +1,12 @@
 const express = require('express');
+const app = express();
 const teleRouter = require('./routes/teleRouter.js');
 const waRouter = require('./routes/waRouter.js');
 const connectDB = require('./db/db.js');
 const cors = require('cors');
-const app = express();
 
-require('dotenv').config();
-
-connectDB();
+require("dotenv")
+connectDB(process.env.DB_URL);
 
 const port = process.env.PORT || 3003;
 
