@@ -7,7 +7,6 @@ const cors = require('cors');
 
 require("dotenv")
 connectDB(process.env.DB_URL);
-
 const port = process.env.PORT || 3003;
 
 app.use(cors({ origin: '*' }));
